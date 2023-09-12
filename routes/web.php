@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +25,7 @@ Route::get('/world', function () {
     return view('hello.world', ['name' => 'Arnold']);
 });
 
-
+Route::get('/html-encoding', function(Request $request){
+    return view("html-encoding", ["name" => $request->input("name")]);
+});
 
