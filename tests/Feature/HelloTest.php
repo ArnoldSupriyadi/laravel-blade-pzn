@@ -10,14 +10,14 @@ class HelloTest extends TestCase
 {
     public function testHello()
     {
-        $this->get('/hello')
-            ->assertSeeText('Arnold');
+        $this->get("/hello")
+            ->assertSeeText("Arnold");
     }
 
     public function testHelloWorld()
     {
-        $this->get('/world')
-            ->assertSeeText('Arnold');
+        $this->get("/world")
+            ->assertSeeText("Arnold");
     }
 
     public function testHelloView()

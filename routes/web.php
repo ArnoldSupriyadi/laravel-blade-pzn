@@ -18,12 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', function () {
-    return view('hello', ['name' => 'Arnold']);
+    return view('hello', [
+        "name" => "Arnold"
+    ]);
 });
 
 Route::get('/world', function () {
-    return view('hello.world', ['name' => 'Arnold']);
+    return view('hello.world', [
+        "name" => "Arnold"
+    ]);
 });
+
 
 Route::get('/html-encoding', function(Request $request){
     return view("html-encoding", ["name" => $request->input("name")]);
